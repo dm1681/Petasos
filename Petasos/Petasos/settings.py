@@ -19,7 +19,7 @@ with open(env_file, 'r') as f:
     
 # make sure that there is a new line at the end of the file...
 env = {line.split('=')[0]:line.split('=')[1][:-1] for line in content}
-
+print(env)
     
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -30,7 +30,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-jh1)bk6yr@=u8$opq_b3&2cw2f*2fh97sntt%f+%4!-mcjz@%^'
+SECRET_KEY = env["DJANGO_SECRET_KEY"]
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
