@@ -19,7 +19,6 @@ with open(env_file, 'r') as f:
     
 # make sure that there is a new line at the end of the file...
 env = {line.split('=')[0]:line.split('=')[1][:-1] for line in content}
-print(env)
     
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
