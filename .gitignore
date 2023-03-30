@@ -4,3 +4,4 @@ data/
 *.pyc
 *.sqlite3
 *\migrations*
+Petasos/polls/static/polls/images/*
