@@ -14,6 +14,9 @@ from pathlib import Path
 
 # custom settings for my own environment
 env_file = Path("../.env")
+if not env_file.exists():
+    env_file = Path("./.env") # try this one?
+
 with open(env_file, 'r') as f:
     content = f.readlines()
     

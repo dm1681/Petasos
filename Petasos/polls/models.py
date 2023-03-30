@@ -18,7 +18,8 @@ class Question(models.Model):
         """
         Whether or not question was published in the last day
         """
-        return self.pub_date >= timezone.now() - datetime.timedelta(days=1)
+        now = timezone.now()
+        return now - datetime.timedelta(days=1) < self.pub_date  <= now
 
     
 class Choice(models.Model):
